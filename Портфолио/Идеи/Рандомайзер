@@ -1,0 +1,9 @@
+import random
+numbers = set()
+
+for num in range(10**6):
+    numbers.add(num)
+
+random_value = random.choice(list(numbers))
+
+print (random_value)

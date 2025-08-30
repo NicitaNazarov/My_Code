@@ -1,0 +1,14 @@
+force_words = ['сила', 'пребудет', 'с', 'тобой', 'Да']
+print(id(force_words))
+
+first = force_words.pop()
+last = force_words.pop(0)
+force_words.insert(0, first)
+force_words.append(last)
+
+#list.append(element) — добавляет элемент в конец списка
+
+
+print(force_words)
+# Убедимся, что это тот же объект, что и в начале программы
+print(id(force_words))

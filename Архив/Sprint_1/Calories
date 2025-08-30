@@ -1,0 +1,24 @@
+from decimal import Decimal
+
+weight = 70
+speed = 12
+height = 185
+
+
+Calories = (0.035 * weight) + ((speed ** 2 / height) * (0.029 * weight))
+print (Calories)
+
+weight = 75  # Вес
+2
+height = 175 # Рост
+3
+dist = 9.75  # Расстояние в км
+4
+hours = 2    # Время движения в часах
+5
+
+6
+spent_calories = (0.035 * weight + (0.029 * weight) * (((dist/hours) ** 2) / height)) * hours * 60
+7
+print(spent_calories)
+

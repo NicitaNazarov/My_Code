@@ -1,0 +1,38 @@
+import datetime as DT
+
+# Сюда надо вбивать имя и дату рождения в формате 'Имя', (дата рождения дд.мм.г)
+
+birthdays = [
+    ('Лера', '16.05.2015'),
+    ('Максим', '16.12.2011'),
+    ('Толя','12.06.2016')
+]
+
+
+FORMAT = DT.datetime.strptime('31.01.2021', '%d.%m.%Y')
+
+lera_birthday = DT.date (2015, 5, 16)
+maxim_birthday = DT.date (2011, 12, 16)
+today = DT.date.today()
+
+print(lera_birthday)
+print(maxim_birthday)
+print(today)
+
+today_year = today.year
+
+def get_days_to_birthday (name, birth_date):
+    if today > birth_date.replace (year = today_year):
+
+        days_to_birthday = today - birth_date.replace (year = today.year)
+        
+    else:
+        days_to_birthday = today - birth_date.replace (year = today.year-1)
+        
+    
+    print (f'{name}, до твоего дня рождения осталось : {days_to_birthday.days} дня')
+    
+for birthday in birthdays:
+    name, birth_date = birthday
+    birth_date = DT.datetime.strptime(birth_date, '%d.%m.%Y').date()
+    get_days_to_birthday(name, birth_date)

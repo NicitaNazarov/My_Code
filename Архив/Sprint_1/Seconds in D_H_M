@@ -1,0 +1,27 @@
+response = input ('Введите время в секундах')
+response = int(response)
+sec_in_days = 60 * 60 * 24
+sec_in_hours = 60 * 60
+sec_in_minetes = 60
+
+days = response // sec_in_days
+response = response % sec_in_days
+
+hours = response // sec_in_hours
+response = response % sec_in_hours
+
+minutes = response // sec_in_minetes
+response = response % sec_in_minetes
+
+print ('Дни =' , days, 'Часы =', hours, 'Минуты =', minutes, 'Секунды =', response)
+
+if days > 3: print ('Уволен') 
+else: print ('Скоро будешь уволен')
+
+
+
+    
+
+    
+
+

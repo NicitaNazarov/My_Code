@@ -1,0 +1,16 @@
+id_string = '32 48 2 6 14 58 2 88 9 14 123 48 3 17 42 42 7'
+# Сюда вписываются числа, где нужно понять, повторяются они или нет
+
+
+id_string_dub_removed = id_string.split()
+IDs = []
+
+for i in id_string_dub_removed:
+    if i not in IDs:
+        IDs.append(i)
+    else:
+        print (f'Найдено повторяющееся ID {i}')
+
+output = IDs.sort
+
+print (output)

@@ -1,0 +1,30 @@
+movie_ratings = [3.7, 5.0, 4.3, 4.0]
+movies = ['Матрица', 'Хакеры', 'Трон', 'Кибер']
+
+list_good = []
+list_bad = []
+
+movies_bad = []
+movies_good = []
+
+for i in range(len(movie_ratings)):
+    rating = movie_ratings [i]
+    movie = movies [i]
+
+    if rating < 4.0:
+        list_bad.append(rating)
+        movies_bad.append(movie)
+        print(f'Фильм {movie} удалён из поиска, так как его рейтинг слишком низкий: {rating}')
+        
+    else:
+        list_good.append(rating)
+        movies_good.append (movie)
+        print(f'У фильма {movie} хорошие оценки: {rating}' )
+    
+
+# print (list_good)
+# print (movies_good)
+
+movies_output = dict(zip(movies_good, list_good))
+
+print(movies_output)
